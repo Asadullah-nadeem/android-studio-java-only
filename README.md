@@ -11,5 +11,5 @@ Preview release: Dolphin (2021.3.1) Canary 7 (March 17, 2022; 4 months ago)
 
 
           git clone https://github.com/AsadullahNadeem/android-studio-java-only.git
- 
- 
+          
+ When you clone a repository, you don't get one file, like you may in other centralized version control systems. By cloning with Git, you get the entire repository - all files, all branches, and all commits.
