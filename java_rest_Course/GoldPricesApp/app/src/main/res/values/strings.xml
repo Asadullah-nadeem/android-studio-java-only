@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Free Gold Prices</string>
+    <string name="about_us">Order IT Services one of the best softwares providing services platform. We provide our services to multiple countries since 2019. We have been helping global companies and established brands through our unique blend of experience, tools, servicees, and education</string>
+    <string name="copy_right" translatable="false">Copyrights © %1$d</string>
+
+    <string name="app_id">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="banner_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_id">ca-app-pub-3940256099942544/1033173712</string>
+
+</resources>
