@@ -9,14 +9,15 @@
         android:roundIcon="@drawable/logoadmin"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".notice.DeleteNoticeActivity"></activity>
+        <activity android:name=".notice.DeleteNoticeActivity"/>
         <activity android:name=".faculty.UpdateTeacherActivity" />
         <activity android:name=".faculty.AddTeacher" />
         <activity android:name=".faculty.UpdateFaculty" />
         <activity android:name=".UploadPdfActivity" />
         <activity android:name=".UploadImage" />
         <activity android:name=".notice.UploadNotice" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
