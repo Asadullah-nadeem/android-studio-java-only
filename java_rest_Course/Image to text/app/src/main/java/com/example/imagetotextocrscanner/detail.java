@@ -2,10 +2,12 @@ package com.example.imagetotextocrscanner;
 
 import android.Manifest;
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -15,6 +17,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -62,7 +65,7 @@ public class detail extends AppCompatActivity {
         final BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(
                 detail.this, R.style.BottomSheetDialogTheme);
         View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(
-                R.layout.layout_bottom_sheet,(LinearLayout)findViewById(R.id.bottomSheetContainer)
+                R.layout.layout_bottom_sheet, (ScrollView) findViewById(R.id.bottomSheetContainer)
         );
         bottomSheetView.findViewById(R.id.exportpdf).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -154,19 +157,32 @@ public class detail extends AppCompatActivity {
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        switch (requestCode)
-        {
-            case  1000:
-                if(grantResults.length>0 && grantResults[0]== PackageManager.PERMISSION_GRANTED)
-                {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+        switch (requestCode) {
+            case 1000:
+                if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     savepdf();
-                }
-                else Toast.makeText(this, "parmission denied..", Toast.LENGTH_SHORT).show();
+                } else Toast.makeText(this, "parmission denied..", Toast.LENGTH_SHORT).show();
         }
     }
     @Override
     public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        AlertDialog.Builder builder = new AlertDialog.Builder(detail.this);
+        builder.setTitle(R.string.app_name);
+        builder.setIcon(R.drawable.icon);
+        builder.setMessage("Do you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }

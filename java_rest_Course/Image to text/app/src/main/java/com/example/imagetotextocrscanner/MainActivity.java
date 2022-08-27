@@ -1,7 +1,9 @@
 package com.example.imagetotextocrscanner;
 
 import android.Manifest;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -119,6 +121,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
     private boolean isExternalStorageWritable() {
         if (Environment.MEDIA_MOUNTED.equals(Environment.getExternalStorageState())) {
             Log.i("State", "Yes, it is writable!");
@@ -127,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
     }
+
     public void writeFile(View view) {
         if (isExternalStorageWritable() && checkPermission(Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             File textFile = new File(Environment.getExternalStorageDirectory().toString(), "myfile.txt");
@@ -142,10 +146,12 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Cannot Write to External Storage.", Toast.LENGTH_SHORT).show();
         }
     }
+
     public boolean checkPermission(String permission) {
         int check = ContextCompat.checkSelfPermission(this, permission);
         return (check == PackageManager.PERMISSION_GRANTED);
     }
+
     private void detectTextFromImage() {
         InputImage image = InputImage.fromBitmap(imageBitmap, 0);
         TextRecognizer recognizer = TextRecognition.getClient();
@@ -154,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
                         new OnSuccessListener<Text>() {
                             @Override
                             public void onSuccess(Text texts) {
-                            processTextRecognitionResult(texts);
+                                processTextRecognitionResult(texts);
 
                             }
                         })
@@ -162,28 +168,50 @@ public class MainActivity extends AppCompatActivity {
                         new OnFailureListener() {
                             @Override
                             public void onFailure(@NonNull Exception e) {
-                              e.printStackTrace();
+                                e.printStackTrace();
                             }
                         });
     }
+
     private void processTextRecognitionResult(Text texts) {
         List<Text.TextBlock> blocks = texts.getTextBlocks();
         if (blocks.size() == 0) {
             Toast.makeText(this, "No text found", Toast.LENGTH_SHORT).show();
-        }
-         else {
+        } else {
             for (Text.TextBlock block : texts.getTextBlocks()) {
                 String text = block.getText();
                 txtView.append(text);
                 openActivity2();
             }
         }
-        }
+    }
+
     private void openActivity2() {
         TextView text_display = findViewById(R.id.text_display);
         String text = text_display.getText().toString();
         Intent intent = new Intent(this, detail.class);
         intent.putExtra(EXTRA_TEXT, text);
         startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle(R.string.app_name);
+        builder.setIcon(R.drawable.icon);
+        builder.setMessage("Do you want to exit?")
+                .setCancelable(false)
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        finish();
+                    }
+                })
+                .setNegativeButton("No", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int id) {
+                        dialog.cancel();
+                    }
+                });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 }
