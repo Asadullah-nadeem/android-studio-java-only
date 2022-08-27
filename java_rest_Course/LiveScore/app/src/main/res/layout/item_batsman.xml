@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/customBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linRank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvOrangeCap"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvBatsmanName"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:maxLines="1"
+            android:minLines="1"
+            android:text="Name" />
+
+        <TextView
+            android:id="@+id/tvBatsman_R"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="R" />
+
+        <TextView
+            android:id="@+id/tvBatsman_B"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="B" />
+
+        <TextView
+            android:id="@+id/tvBatsman_4s"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="4" />
+
+        <TextView
+            android:id="@+id/tvBatsman_6s"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="6" />
+
+        <TextView
+            android:id="@+id/tvBatsman_SR"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="Sr"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

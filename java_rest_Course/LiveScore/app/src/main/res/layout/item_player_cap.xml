@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/customBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linRank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cvOrangeCap"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/tvPlayerSno"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="1" />
+
+        <TextView
+            android:id="@+id/tvPlayerName"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="Player" />
+
+        <TextView
+            android:id="@+id/tvPlayerTeam"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="Team" />
+
+        <TextView
+            android:id="@+id/tvPlayerRun"
+            style="@style/customText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/nexa_light"
+            android:gravity="center"
+            android:text="Run" />
+    </LinearLayout>
+</LinearLayout>

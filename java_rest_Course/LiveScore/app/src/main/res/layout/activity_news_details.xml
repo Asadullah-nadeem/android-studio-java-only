@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/customBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/adsvisible"
+        android:orientation="vertical"
+        android:padding="@dimen/_dim10">
+
+        <RelativeLayout
+            android:id="@+id/topDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                style="@style/customForeground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/ic_back_arrow"
+                android:padding="5dp" />
+
+            <ImageView
+                android:id="@+id/ivShare"
+                style="@style/customForeground"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="15dp"
+                android:visibility="gone"
+                android:background="@drawable/ic_share"
+                android:padding="5dp" />
+        </RelativeLayout>
+
+        <soup.neumorphism.NeumorphCardView
+            android:id="@+id/nmImage"
+            style="@style/CustomShapeAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:layout_margin="15dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/newsImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:background="@drawable/small_thumbnail"
+                    android:scaleType="fitCenter" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="175dp"
+                    android:alpha="0.2"
+                    android:background="@drawable/small_thumbnail"
+                    android:backgroundTint="@color/black"
+                    android:scaleType="centerCrop" />
+
+                <TextView
+                    android:id="@+id/news_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/latestTime"
+                    android:layout_marginStart="@dimen/_dim10"
+                    android:layout_marginEnd="@dimen/_dim32"
+                    android:maxLines="2"
+                    android:minLines="1"
+                    android:padding="10dp"
+                    android:text="New US cricket league aims to..."
+                    android:textColor="@color/color_white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/latestTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginEnd="20dp"
+                    android:maxLines="3"
+                    android:minLines="1"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="20dp"
+                    android:text="1 hour ago"
+                    android:textColor="@color/color_white"
+                    android:textSize="10sp" />
+            </RelativeLayout>
+        </soup.neumorphism.NeumorphCardView>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never"
+            android:scrollbarSize="0dp"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp">
+
+                <TextView
+                    android:id="@+id/news_description"
+                    style="@style/customText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginBottom="20dp"
+                    android:fontFamily="@font/nexa_light"
+                    android:lineSpacingExtra="2sp"
+                    android:minLines="1"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="New US cricket league aims to...New US cricket league aims to..."
+                    android:textSize="14sp" />
+            </RelativeLayout>
+        </ScrollView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/adsvisible"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_alignParentBottom="true"
+        android:background="#dfdfdf">
+
+        <RelativeLayout
+            android:id="@+id/adMobView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center" >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ads Loading"
+                android:gravity="center"
+                android:textColor="@android:color/black"/>
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>

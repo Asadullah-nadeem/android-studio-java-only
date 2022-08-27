@@ -1,0 +1,766 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/customBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="4dp">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/mainscore">
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cvMatchInfo"
+                style="@style/CustomShapeAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="vertical">
+
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/CustomShapeAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:neumorph_shapeType="flat">
+
+                        <RelativeLayout
+                            android:id="@+id/rel_team"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp">
+
+                            <RelativeLayout
+                                android:id="@+id/rel_Team"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:id="@+id/rel_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rel_Team1"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/ivPlayerImage1"
+                                            android:layout_width="60dp"
+                                            android:layout_height="70dp"
+                                            android:src="@drawable/player_image"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:id="@+id/ivFlagTeam1"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="15dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_toRightOf="@+id/ivPlayerImage1"
+                                            android:src="@drawable/ic_flag_dark" />
+
+                                        <TextView
+                                            android:id="@+id/tvTeam1Name"
+                                            style="@style/customText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_marginTop="14dp"
+                                            android:layout_toRightOf="@+id/ivFlagTeam1"
+                                            android:ems="5"
+                                            android:fontFamily="@font/nexa_black_webfont"
+                                            android:lines="1"
+                                            android:padding="3dp"
+                                            android:text="INDIA"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            style="@style/customText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvTeam1Name"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="12dp"
+                                            android:layout_toRightOf="@+id/ivFlagTeam1"
+                                            android:fontFamily="@font/nexa_black_webfont"
+                                            android:text="0"
+                                            android:textSize="16dp" />
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:id="@+id/rel_Team2"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true">
+
+                                        <ImageView
+                                            android:id="@+id/ivPlayerImage2"
+                                            android:layout_width="60dp"
+                                            android:layout_height="70dp"
+                                            android:layout_toRightOf="@+id/ivFlagTeam2"
+                                            android:src="@drawable/player_image"
+                                            android:visibility="gone" />
+
+                                        <ImageView
+                                            android:id="@+id/ivFlagTeam2"
+                                            android:layout_width="30dp"
+                                            android:layout_height="30dp"
+                                            android:layout_marginTop="10dp"
+                                            android:layout_marginEnd="15dp"
+                                            android:layout_toRightOf="@+id/tvTeam2Name"
+                                            android:src="@drawable/ic_flag_white" />
+
+                                        <TextView
+                                            android:id="@+id/tvTeam2Name"
+                                            style="@style/customText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="4dp"
+                                            android:layout_marginTop="14dp"
+                                            android:layout_marginRight="4dp"
+                                            android:ems="5"
+                                            android:fontFamily="@font/nexa_black_webfont"
+                                            android:lines="1"
+                                            android:padding="3dp"
+                                            android:text="ENG"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            style="@style/customText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvTeam2Name"
+                                            android:layout_gravity="center"
+                                            android:layout_marginRight="12dp"
+                                            android:layout_toLeftOf="@+id/ivFlagTeam2"
+                                            android:fontFamily="@font/nexa_black_webfont"
+                                            android:text="1"
+                                            android:textSize="16dp" />
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvVS"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="15dp"
+                                        android:text="VS"
+                                        android:textColor="@color/color_text_secondary" />
+
+                                    <TextView
+                                        style="@style/customBackground"
+                                        android:layout_width="70dp"
+                                        android:layout_height="30dp"
+                                        android:layout_below="@+id/tvVS"
+                                        android:layout_centerHorizontal="true"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@drawable/bg_scoreupdate"
+                                        android:gravity="center"
+                                        android:text="1/5"
+                                        android:textAlignment="center"
+                                        android:textColor="@color/color_text_secondary" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <TextView
+                            android:id="@+id/MatchInfo"
+                            style="@style/customText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:fontFamily="@font/nexa_bold_webfont"
+                            android:text="Match Info"
+                            android:textAlignment="center"
+                            android:textSize="18dp" />
+
+                        <TextView
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MatchInfo"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="Series :"
+                            android:textAlignment="center"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvSeries"
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/MatchInfo"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="England tour of India, 2021"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSeries"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="Match :"
+                            android:textAlignment="center"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvMatch"
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvSeries"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="2nd T20 Match"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvMatch"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="Date Time :"
+                            android:textAlignment="center"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvDateTime"
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvMatch"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="14 March 2021, 07:00 PM"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvDateTime"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="Venue :"
+                            android:textAlignment="center"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvVenue"
+                            style="@style/customText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tvDateTime"
+                            android:layout_alignParentRight="true"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/nexa_light"
+                            android:text="Narendra Modi Stadium, Ahmdabad"
+                            android:textSize="12dp" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+            <TextView
+                android:id="@+id/tvSquads"
+                style="@style/customText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvMatchInfo"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/nexa_bold_webfont"
+                android:text="Squads"
+                android:textSize="18dp" />
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cvTeam1"
+                style="@style/CustomShapeAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSquads"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/CustomShapeAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:neumorph_shapeType="flat">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp">
+
+                                <ImageView
+                                    android:id="@+id/ivFlagTeam1Squads"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:src="@drawable/ic_flag_dark" />
+
+                                <TextView
+                                    android:id="@+id/tvSquadsTeam1Name"
+                                    style="@style/customText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_toRightOf="@+id/ivFlagTeam1Squads"
+                                    android:fontFamily="@font/nexa_bold_webfont"
+                                    android:text="INDIA"
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/ic_up_arrow" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPlayer1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+            <RelativeLayout
+                android:id="@+id/ads"
+                android:layout_below="@+id/cvTeam1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:minHeight="300dp">
+
+                <FrameLayout
+                    android:id="@+id/native_ad_container"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@color/white"
+                    android:gravity="center"
+
+                    android:orientation="vertical" />
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:id="@+id/adsgone"
+
+                    android:gravity="center"
+                    android:textColor="@color/black"/>
+            </RelativeLayout>
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/cvTeam2"
+                style="@style/CustomShapeAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+              android:layout_below="@+id/ads"
+                android:layout_marginTop="10dp"
+                android:clickable="true"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <soup.neumorphism.NeumorphCardView
+                        style="@style/CustomShapeAppearance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        app:neumorph_shapeType="flat">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="15dp">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp">
+
+                                <ImageView
+                                    android:id="@+id/ivFlagTeam2Squads"
+                                    android:layout_width="24dp"
+                                    android:layout_height="24dp"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="4dp"
+                                    android:src="@drawable/ic_flag_white" />
+
+                                <TextView
+                                    android:id="@+id/tvSquadsTeam2Name"
+                                    style="@style/customText"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_marginTop="8dp"
+                                    android:layout_toRightOf="@+id/ivFlagTeam2Squads"
+                                    android:fontFamily="@font/nexa_bold_webfont"
+                                    android:text="ENG"
+                                    android:textSize="12dp" />
+
+                                <ImageView
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginTop="4dp"
+                                    android:layout_marginRight="15dp"
+                                    android:src="@drawable/ic_down_arrow" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </soup.neumorphism.NeumorphCardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvPlayer2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+
+            <TextView
+                android:id="@+id/tvTop5CapHolder"
+                style="@style/customText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvTeam2"
+                android:layout_marginLeft="20dp"
+                android:fontFamily="@font/nexa_bold_webfont"
+                android:text="Top 5 Cap Holder:"
+                android:textSize="18dp"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:id="@+id/rel_OrangeCapMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvTop5CapHolder"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_orange_cap" />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/cvOrangeCapMain"
+                    style="@style/CustomShapeAppearance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp">
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:id="@+id/cvOrangeCap"
+                                style="@style/CustomShapeAppearance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                app:neumorph_shapeType="flat">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="8dp">
+
+                                        <TextView
+                                            android:id="@+id/tvOrangeCap"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:fontFamily="@font/nexa_bold_webfont"
+                                            android:text="Orange Cap"
+                                            android:textColor="@color/color_text_orange"
+                                            android:textSize="14dp" />
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="6dp"
+                                            android:layout_marginRight="20dp"
+                                            android:src="@drawable/ic_down_arrow" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </soup.neumorphism.NeumorphCardView>
+
+                            <LinearLayout
+                                android:id="@+id/linRank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cvOrangeCap"
+                                android:background="@drawable/bg_scoreupdate"
+                                android:padding="8dp">
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Rank" />
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Player" />
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Team" />
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Run" />
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvOrangeCap"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/linRank"
+                                android:layout_margin="8dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </soup.neumorphism.NeumorphCardView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rel_PurpleCapMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rel_OrangeCapMain"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_purple_cap" />
+
+                <soup.neumorphism.NeumorphCardView
+                    android:id="@+id/cvPurpleCapMain"
+                    style="@style/CustomShapeAppearance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:clickable="true"
+                    app:neumorph_shapeType="flat">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="25dp">
+
+                            <soup.neumorphism.NeumorphCardView
+                                android:id="@+id/cvPurpleCap"
+                                style="@style/CustomShapeAppearance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:clickable="true"
+                                app:neumorph_shapeType="flat">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:padding="15dp">
+
+                                    <RelativeLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginBottom="8dp">
+
+                                        <TextView
+                                            android:id="@+id/tvPurpleCap"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="8dp"
+                                            android:layout_marginTop="8dp"
+                                            android:fontFamily="@font/nexa_bold_webfont"
+                                            android:text="Purple Cap"
+                                            android:textColor="@color/color_text_purple"
+                                            android:textSize="14dp" />
+
+                                        <ImageView
+                                            android:layout_width="20dp"
+                                            android:layout_height="20dp"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_marginTop="6dp"
+                                            android:layout_marginRight="20dp"
+                                            android:src="@drawable/ic_down_arrow" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </soup.neumorphism.NeumorphCardView>
+
+                            <LinearLayout
+                                android:id="@+id/linPurpleRank"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/cvPurpleCap"
+                                android:background="@drawable/bg_scoreupdate"
+                                android:padding="8dp">
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Rank" />
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Player" />
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Team" />
+
+                                <TextView
+                                    style="@style/customText"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:fontFamily="@font/nexa_regular_webfont"
+                                    android:gravity="center"
+                                    android:text="Wickets" />
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvPurpleCap"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/linPurpleRank"
+                                android:layout_margin="8dp" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                </soup.neumorphism.NeumorphCardView>
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminate="true" />
+</RelativeLayout>

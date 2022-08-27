@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/customBackground"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/parent"
+        style="@style/CustomShapeAppearance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipChildren="false">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.2"
+            android:clipChildren="false"
+            android:padding="@dimen/_dim16">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/mainnews_bg"
+                android:clipChildren="false"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="@dimen/_dim12"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    app:cardBackgroundColor="@color/shimmer_placeholder"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="@dimen/_dim10" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="@dimen/_dim12"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/shimmer_placeholder"
+                    app:cardBackgroundColor="@color/shimmer_placeholder"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="@dimen/_dim10" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="@dimen/margin_5"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_placeholder"
+                            app:cardBackgroundColor="@color/shimmer_placeholder"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="@dimen/_dim10" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/leftSideTeamImg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:src="@color/shimmer_placeholder" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/margin_5"
+                        android:layout_marginTop="5dp"
+                        android:layout_weight="0.1"
+                        android:background="@color/shimmer_placeholder"
+                        android:paddingLeft="@dimen/margin_5"
+                        android:paddingTop="2dp"
+                        android:paddingRight="@dimen/margin_5"
+                        android:paddingBottom="3dp"
+                        android:textAlignment="center"
+                        android:textColor="#ff878787" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.45"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="100dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/shimmer_placeholder"
+                            app:cardBackgroundColor="@color/shimmer_placeholder"
+                            app:cardCornerRadius="4dp"
+                            app:cardElevation="@dimen/_dim10" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/rightSideTeamImg"
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:src="@color/shimmer_placeholder" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="300dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginStart="@dimen/_dim12"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@color/shimmer_placeholder"
+                    app:cardBackgroundColor="@color/shimmer_placeholder"
+                    app:cardCornerRadius="4dp"
+                    app:cardElevation="@dimen/_dim10" />
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/ivIpl"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                app:cardBackgroundColor="@color/shimmer_placeholder"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="@dimen/_dim10" />
+        </RelativeLayout>
+    </soup.neumorphism.NeumorphCardView>
+</RelativeLayout>

@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent">
+
+    <RelativeLayout
+        style="@style/customBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rectangle_bottomsheet_bg"
+        android:padding="@dimen/_dim10">
+
+        <ImageView
+            android:id="@+id/live"
+            android:layout_width="110dp"
+            android:layout_height="10dp"
+            android:layout_below="@+id/tvLiveMatch"
+            android:layout_marginLeft="14dp"
+            android:src="@drawable/ic_title_line" />
+
+        <TextView
+            android:id="@+id/tvLiveMatch"
+            style="@style/customText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lottie_animation_view_S"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/nexa_bold_webfont"
+            android:text="Result Score"
+            android:textSize="16dp" />
+
+        <TextView
+            style="@style/customText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:fontFamily="@font/nexa_heavy"
+            android:text="@string/swipe_up_to_see_more"
+            android:textAlignment="center" />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottie_animation_view_S"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerHorizontal="true"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="ic_swipe_up.json"
+            app:lottie_loop="true" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/live"
+            android:orientation="vertical">
+
+            <soup.neumorphism.NeumorphCardView
+                android:id="@+id/backButton_CardVie"
+                style="@style/CustomShapeAppearance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:clickable="true"
+                app:neumorph_shapeType="flat">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/mainscore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <soup.neumorphism.NeumorphCardView
+                            android:id="@+id/backButton_wStudentProfile_CardVie"
+                            style="@style/CustomShapeAppearance"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:neumorph_shapeType="flat">
+
+                            <RelativeLayout
+                                style="@style/customBackground"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/round_corner">
+
+                                <RelativeLayout
+                                    android:id="@+id/rel_team"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="20dp"
+                                    android:paddingTop="20dp"
+                                    android:paddingRight="20dp">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rel_Team"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/ivDottedLine"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="3dp"
+                                            android:layout_below="@+id/rel_"
+                                            android:layerType="software"
+                                            android:src="@drawable/ic_dotted_line" />
+
+                                        <RelativeLayout
+                                            android:id="@+id/rel_"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_margin="10dp"
+                                            android:layout_marginBottom="6dp">
+
+                                            <RelativeLayout
+                                                android:id="@+id/rel_Team1"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginTop="20dp">
+
+                                                <LinearLayout
+                                                    android:id="@+id/rel_Team1Score"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content">
+
+                                                    <TextView
+                                                        android:id="@+id/tvTeam1Score"
+                                                        style="@style/customText"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="6dp"
+                                                        android:fontFamily="@font/nexa_heavy"
+                                                        android:text="120/2"
+                                                        android:textSize="16dp"
+                                                        android:textStyle="bold" />
+
+                                                    <TextView
+                                                        android:id="@+id/tvTeam1Over"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="2dp"
+                                                        android:layout_marginTop="8dp"
+                                                        android:text="(10.2)"
+                                                        android:textColor="@color/color_text_secondary"
+                                                        android:textSize="12dp"
+                                                        android:visibility="gone" />
+                                                </LinearLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/rel_Team1Score"
+                                                    android:layout_marginTop="5dp">
+
+                                                    <ImageView
+                                                        android:id="@+id/ivTeam1Image"
+                                                        android:layout_width="35dp"
+                                                        android:layout_height="35dp"
+                                                        android:src="@drawable/ic_india" />
+
+                                                    <TextView
+                                                        android:id="@+id/tvTeam1Name"
+                                                        style="@style/customText"
+                                                        android:layout_width="60dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="4dp"
+                                                        android:maxLines="1"
+                                                        android:minLines="1"
+                                                        android:text="IND*"
+                                                        android:textSize="16dp" />
+                                                </LinearLayout>
+                                            </RelativeLayout>
+
+                                            <RelativeLayout
+                                                android:id="@+id/rel_Team2"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentRight="true"
+                                                android:layout_marginTop="20dp">
+
+                                                <LinearLayout
+                                                    android:id="@+id/rel_Team2Score"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content">
+
+                                                    <TextView
+                                                        android:id="@+id/tvTeam2Score"
+                                                        style="@style/customText"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginTop="6dp"
+                                                        android:fontFamily="@font/nexa_heavy"
+                                                        android:text="164/6"
+                                                        android:textSize="16dp"
+                                                        android:textStyle="bold" />
+
+                                                    <TextView
+                                                        android:id="@+id/tvTeam2Over"
+                                                        android:layout_width="wrap_content"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_marginLeft="2dp"
+                                                        android:layout_marginTop="8dp"
+                                                        android:text="(19.2)"
+                                                        android:textColor="@color/color_text_secondary"
+                                                        android:textSize="12dp"
+                                                        android:visibility="gone" />
+                                                </LinearLayout>
+
+                                                <RelativeLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_below="@+id/rel_Team2Score"
+                                                    android:layout_marginTop="5dp">
+
+                                                    <ImageView
+                                                        android:id="@+id/ivTeam2Image"
+                                                        android:layout_width="35dp"
+                                                        android:layout_height="35dp"
+                                                        android:paddingLeft="4dp"
+                                                        android:src="@drawable/ic_india" />
+
+                                                    <ImageView
+                                                        android:layout_width="15dp"
+                                                        android:layout_height="15dp"
+                                                        android:layout_marginTop="20dp"
+                                                        android:src="@drawable/ic_trophy"
+                                                        android:visibility="gone" />
+
+                                                    <TextView
+                                                        android:id="@+id/tvTeam2Name"
+                                                        style="@style/customText"
+                                                        android:layout_width="60dp"
+                                                        android:layout_height="wrap_content"
+                                                        android:layout_gravity="center"
+                                                        android:layout_margin="4dp"
+                                                        android:layout_toRightOf="@+id/ivTeam2Image"
+                                                        android:maxLines="1"
+                                                        android:minLines="1"
+                                                        android:text="ENG"
+                                                        android:textSize="16dp" />
+                                                </RelativeLayout>
+                                            </RelativeLayout>
+                                        </RelativeLayout>
+
+                                        <TextView
+                                            android:id="@+id/tvVanu"
+                                            style="@style/customText"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/ivDottedLine"
+                                            android:layout_margin="4dp"
+                                            android:fontFamily="@font/nexa_light"
+                                            android:text="Stadium"
+                                            android:textSize="12dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerInParent="true"
+                                            android:text="VS"
+                                            android:textColor="@color/color_text_secondary" />
+
+                                        <TextView
+                                            android:id="@+id/tvMatchTitle"
+                                            style="@style/customText"
+                                            android:layout_width="180dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerHorizontal="true"
+                                            android:layout_marginStart="7dp"
+                                            android:layout_marginTop="7dp"
+                                            android:fontFamily="@font/nexa_light"
+                                            android:maxLines="1"
+                                            android:minLines="1"
+                                            android:text="2nd  T20 Match"
+                                            android:textAlignment="center"
+                                            android:textSize="14dp" />
+
+                                        <TextView
+                                            android:id="@+id/tvdate"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_below="@+id/tvMatchTitle"
+                                            android:fontFamily="@font/nexa_light"
+                                            android:text="16 March 2021  07:00 PM"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/color_text_orange"
+                                            android:textSize="10dp" />
+
+                                        <TextView
+                                            style="@style/customText"
+                                            android:layout_width="54dp"
+                                            android:layout_height="14dp"
+                                            android:layout_marginStart="7dp"
+                                            android:layout_marginTop="7dp"
+                                            android:background="@drawable/ic_finished_icon"
+                                            android:gravity="right|center_vertical|center_horizontal|center|end"
+                                            android:paddingLeft="4dp"
+                                            android:paddingRight="4dp"
+                                            android:text="FINISHED"
+                                            android:textAlignment="viewEnd"
+                                            android:textColor="@color/white"
+                                            android:textSize="7.5dp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="40dp"
+                                    android:layout_below="@+id/rel_team"
+                                    android:layout_gravity="bottom">
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="40dp"
+                                        android:layout_gravity="bottom"
+                                        android:background="@drawable/ic_white_rounded">
+
+                                        <TextView
+                                            android:id="@+id/tvMatchResult"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="6dp"
+                                            android:fontFamily="@font/nexa_bold_webfont"
+                                            android:text="England won by 8 wickets"
+                                            android:textAlignment="center"
+                                            android:textColor="@color/color_green"
+                                            android:textSize="12dp" />
+                                    </RelativeLayout>
+                                </RelativeLayout>
+                            </RelativeLayout>
+                        </soup.neumorphism.NeumorphCardView>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mainscore">
+
+                        <RelativeLayout
+                            style="@style/customBackground"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/round_corner">
+
+                            <RelativeLayout
+                                android:id="@+id/overview"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="105dp"
+                                    android:layout_below="@+id/tvStart">
+
+                                    <ImageView
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginRight="55dp"
+                                        android:layout_marginBottom="20dp"
+                                        android:src="@drawable/ic_player_placeholder_dark" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tvPlayerOfTheMatch"
+                                    style="@style/customText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvStart"
+                                    android:layout_marginLeft="40dp"
+                                    android:layout_marginTop="30dp"
+                                    android:layout_marginBottom="4dp"
+                                    android:fontFamily="@font/nexa_bold_webfont"
+                                    android:text="----" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/tvPlayerOfTheMatch"
+                                    android:layout_marginLeft="40dp"
+                                    android:fontFamily="@font/nexa_heavy"
+                                    android:text="----"
+                                    android:textColor="@color/color_text_orange" />
+
+                                <TextView
+                                    android:id="@+id/tvStart"
+                                    style="@style/customText"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/nexa_bold_webfont"
+                                    android:text="Player Of The Match"
+                                    android:textAlignment="center" />
+                            </RelativeLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+            </soup.neumorphism.NeumorphCardView>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

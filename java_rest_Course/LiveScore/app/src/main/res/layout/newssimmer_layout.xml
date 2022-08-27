@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/customBackground"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/color_black">
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/parent"
+        style="@style/CustomShapeAppearance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="280dp">
+
+            <TextView
+                android:id="@+id/news_title"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="40dp"
+                android:background="@color/exblack"
+                android:elevation="@dimen/_dim16"
+                android:maxLines="3"
+                android:minLines="1"
+                android:paddingLeft="20dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="20dp"
+                android:textColor="@color/color_white"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/latestTime"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginEnd="20dp"
+                android:background="@color/exblack"
+                android:elevation="@dimen/_dim16"
+                android:maxLines="3"
+                android:minLines="1"
+                android:paddingLeft="20dp"
+                android:paddingEnd="10dp"
+                android:paddingRight="7dp"
+                android:paddingBottom="20dp"
+                android:text=""
+                android:textColor="@color/color_white"
+                android:textSize="10sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                app:cardCornerRadius="@dimen/_dim16">
+
+                <ImageView
+                    android:id="@+id/news_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:src="@color/Colorbackground" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:adjustViewBounds="true"
+                    android:alpha="0.3"
+                    android:background="@color/black"
+                    android:scaleType="centerCrop" />
+            </androidx.cardview.widget.CardView>
+        </RelativeLayout>
+    </soup.neumorphism.NeumorphCardView>
+</RelativeLayout>

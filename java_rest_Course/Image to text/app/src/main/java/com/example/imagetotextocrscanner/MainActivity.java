@@ -68,9 +68,6 @@ public class MainActivity extends AppCompatActivity {
         detectTextBtn = findViewById(R.id.detect_text_image_btn);
         imageView = findViewById(R.id.image_view);
         txtView = findViewById(R.id.text_display);
-        Toolbar toolbar = findViewById(R.id.toolbar1);
-        toolbar.setTitleTextColor(Color.WHITE);
-        setSupportActionBar(toolbar);
         myDialog1 = new Dialog(this);
         captureImageBtn.setOnClickListener(new View.OnClickListener() {
             @Override

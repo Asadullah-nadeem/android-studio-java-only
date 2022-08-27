@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/customBackground"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/btnTest"
+                style="@style/CustomShapeAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="Test"
+                android:textSize="10dp" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/btnOdi"
+                style="@style/CustomShapeAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="ODI"
+                android:textSize="10dp" />
+
+            <soup.neumorphism.NeumorphButton
+                android:id="@+id/btnT20"
+                style="@style/CustomShapeAppearance"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:fontFamily="@font/nexa_heavy"
+                android:text="T20"
+                android:textSize="10dp" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nsview"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="3dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rank"
+                style="@style/customText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:fontFamily="@font/nexa_black_webfont"
+                android:padding="10dp"
+                android:text="Rank"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/team"
+                style="@style/customText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:fontFamily="@font/nexa_black_webfont"
+                android:padding="10dp"
+                android:text="Team"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/matches"
+                style="@style/customText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/nexa_black_webfont"
+                android:padding="10dp"
+                android:text="Matches"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/point"
+                style="@style/customText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:fontFamily="@font/nexa_black_webfont"
+                android:padding="10dp"
+                android:text="Points"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/rating"
+                style="@style/customText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_weight="1"
+                android:fontFamily="@font/nexa_black_webfont"
+                android:padding="10dp"
+                android:text="Rating"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvteam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:overScrollMode="never"
+            android:scrollbarSize="0dp" />
+    </LinearLayout>
+</RelativeLayout>

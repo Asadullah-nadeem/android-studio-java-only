@@ -7,13 +7,10 @@
     android:background="#000000"
     tools:context=".MainActivity">
 
-    <include
-        android:id="@+id/toolbar1"
-        layout="@layout/toolb" />
+
 
     <ProgressBar
         android:id="@+id/progressBar1"
-        android:layout_below="@id/toolbar1"
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="40dp"
         android:layout_height="40dp"
@@ -21,7 +18,7 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:indeterminateTintMode="src_atop"
-        android:indeterminateTint="#000000"
+        android:indeterminateTint="#FFFFFF"
         android:visibility="gone"
         android:layout_centerHorizontal="true"/>
 
@@ -33,6 +30,7 @@
         android:layout_below="@id/progressBar1"
         android:clickable="false"
         android:src="@drawable/scan" />
+
 
     <TextView
         android:id="@+id/text_display"
@@ -55,7 +53,7 @@
         android:layout_above="@id/adView"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="55dp"
-        android:background="#090909"
+        android:background="#000000"
         android:gravity="center">
 
         <Button
