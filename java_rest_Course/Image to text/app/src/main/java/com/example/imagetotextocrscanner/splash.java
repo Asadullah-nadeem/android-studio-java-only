@@ -10,7 +10,7 @@ public class splash extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        final Intent intent = new Intent(this,navi.class);
+        final Intent intent = new Intent(this,MainActivity.class);
         Thread timer = new Thread(){
             public void run(){
                 try {

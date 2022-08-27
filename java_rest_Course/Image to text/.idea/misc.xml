@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/layout/activity_main.xml" value="0.17074275362318841" />
+        <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/drawable-v24/available.xml" value="0.171" />
+        <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/drawable-v24/bottom_sheet_background.xml" value="0.171" />
+        <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/drawable-v24/top.xml" value="0.171" />
+        <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/drawable-v24/uploadbutton.xml" value="0.171" />
+        <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/layout/activity_navi.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/layout/activity_splash.xml" value="0.1526268115942029" />
         <entry key="..\:/Users/Bad-Boy/Desktop/android-studio-java-only/java_rest_Course/Image to text/app/src/main/res/layout/layout_bottom_sheet.xml" value="0.5" />
