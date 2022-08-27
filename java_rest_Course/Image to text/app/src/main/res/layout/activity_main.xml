@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ffffff"
+    android:background="#000000"
     tools:context=".MainActivity">
 
     <include
@@ -28,11 +28,11 @@
     <ImageView
         android:id="@+id/image_view"
         android:layout_width="match_parent"
-        android:layout_below="@id/progressBar1"
-        android:layout_above="@id/btn1"
         android:layout_height="match_parent"
-        android:src="@drawable/scan"
-        android:clickable="false"/>
+        android:layout_above="@id/btn1"
+        android:layout_below="@id/progressBar1"
+        android:clickable="false"
+        android:src="@drawable/scan" />
 
     <TextView
         android:id="@+id/text_display"
@@ -44,7 +44,7 @@
         android:text=""
         android:background="@null"
         android:layout_below="@id/image_view"
-        android:textColor="#000000"
+        android:textColor="#131313"
         android:textSize="13sp"
         android:layout_margin="10dp"/>
 
@@ -52,37 +52,37 @@
         android:id="@+id/btn1"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:gravity="center"
-        android:layout_marginBottom="55dp"
         android:layout_above="@id/adView"
-        android:background="#FAFAFA">
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="55dp"
+        android:background="#090909"
+        android:gravity="center">
 
         <Button
             android:id="@+id/capture_image_btn"
-            android:layout_width="50dp"
+            android:layout_width="58dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:background="@drawable/available"
             android:layout_marginEnd="20dp"
+            android:background="@drawable/available"
             android:drawableTop="@drawable/ic_add_black_24dp"
-            android:paddingTop="12dp"/>
+            android:paddingTop="12dp" />
 
         <Button
             android:id="@+id/detect_text_image_btn"
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:textColor="#ffffff"
-            android:elevation="15dp"
-            android:onClick="detecttext"
-            android:visibility="gone"
-            android:fontFamily="@font/robotomedium"
-            android:background="@drawable/uploadbutton"
-            android:textSize="15sp"
-            android:text="Scan"
-            android:textStyle="bold"
+            android:layout_marginStart="20dp"
             android:layout_marginEnd="10dp"
-            android:layout_marginStart="20dp"/>
+            android:background="@drawable/uploadbutton"
+            android:elevation="15dp"
+            android:fontFamily="@font/robotomedium"
+            android:onClick="detecttext"
+            android:text="Scan"
+            android:textColor="#ffffff"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
 
     </LinearLayout>
 
