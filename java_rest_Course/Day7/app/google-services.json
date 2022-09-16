@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "184930813913",
+    "project_id": "onechat-bb7e7",
+    "storage_bucket": "onechat-bb7e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:184930813913:android:83d74ad6e3de6494d97bc8",
+        "android_client_info": {
+          "package_name": "com.codeaxe.onechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "184930813913-2a1o793kd8mrvdmfc62f5i4o4gmt7v0c.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codeaxe.onechat",
+            "certificate_hash": "bfc81b5f762374851cb5661839573e6a822ccf57"
+          }
+        },
+        {
+          "client_id": "184930813913-5cd879nupdb7lta8cnbfkmp8um3509an.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMa_2Wy7Z_2KiUWBME9_iCG73SPUBV7Jo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "184930813913-5cd879nupdb7lta8cnbfkmp8um3509an.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
