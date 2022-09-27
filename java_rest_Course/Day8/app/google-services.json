@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1053789322373",
+    "project_id": "photoenorecovery",
+    "storage_bucket": "photoenorecovery.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053789322373:android:a2b64adaac20f0be98bdec",
+        "android_client_info": {
+          "package_name": "com.codeaxe.photoenorecovery"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053789322373-o4pttkh3tm4e7cnu0l122kql9k6qe8l9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codeaxe.photoenorecovery",
+            "certificate_hash": "bfc81b5f762374851cb5661839573e6a822ccf57"
+          }
+        },
+        {
+          "client_id": "1053789322373-ro976hp20644tcfmo7g6fjmjnbgkp76t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMHOYe4u-3dtdV5J1TMWBj4rb56xMY5iM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053789322373-ro976hp20644tcfmo7g6fjmjnbgkp76t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
